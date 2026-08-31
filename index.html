@@ -1,11 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Profil Sekolah & Komunitas</title>
+    <link rel="stylesheet" href="/src/style.css">
 </head>
 <body>
-    
+    <!-- Navigasi -->
+    <nav class="navbar">
+        <div class="logo">KODEKITA.</div>
+        <ul class="nav-links">
+            <li><a href="#beranda" class="nav-item active-nav">Beranda</a></li>
+            <li><a href="#tentang" class="nav-item">Tentang</a></li>
+            <li><a href="#galeri" class="nav-item">Galeri</a></li>
+            <li><a href="#kontak" class="nav-item">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Bungkus semua section -->
+    <div class="main-container">
+        <!-- Halaman Beranda (Dua Kolom: Teks & Gambar) -->
+        <section id="beranda" class="hero page-section">
+            <div class="hero-container">
+                <!-- Sisi Kiri: Teks & Tombol -->
+                <div class="hero-text">
+                    <h1>Membangun Masa Depan Teknologi</h1>
+                    <p>Wadah kolaborasi developer muda untuk berkarya, belajar, dan berinovasi tanpa batas di dunia pemrograman.</p>
+                    <a href="#tentang" class="btn nav-item">Jelajahi Profil</a>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-box">
+                            <h3>100+</h3>
+                            <p>Anggota Aktif</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>25+</h3>
+                            <p>Proyek IT</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sisi Kanan: Area Gambar / Ilustrasi -->
+                <div class="hero-image">
+                    <div class="image-box">
+                        <span>ILUSTRASI / LOGO</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Halaman Tentang -->
+        <section id="tentang" class="content-section page-section">
+            <h2>Tentang Kami</h2>
+            <p>Kami adalah komunitas IT yang fokus pada pengembangan skill pemrograman, kolaborasi proyek nyata, dan persiapan karier di dunia perangkat lunak profesional.</p>
+        </section>
+
+        <!-- Halaman Galeri -->
+        <section id="galeri" class="content-section bg-light page-section">
+            <h2>Galeri Kegiatan</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">PROYEK 01</div>
+                <div class="gallery-item">PROYEK 02</div>
+                <div class="gallery-item">PROYEK 03</div>
+            </div>
+        </section>
+
+        <!-- Halaman Kontak -->
+        <section id="kontak" class="content-section page-section">
+            <h2>Hubungi Kami</h2>
+            <form action="proses_kontak.php" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap:</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama..." required>
+                </div>
+                <div class="form-group">
+                    <label for="pesan">Pesan:</label>
+                    <textarea id="pesan" name="pesan" rows="4" placeholder="Tulis pesanmu di sini..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-submit">Kirim Pesan</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Tim 5 - KodeKita Studio. Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <!-- File JavaScript Terpisah -->
+    <script src="script.js"></script>
 </body>
 </html>
