@@ -963,6 +963,10 @@ body.light .navbar {
         align-items: start;
         flex-direction: column;
     }
+
+    .gallery-filter {
+        width: 100%;
+    }
 }
 
 @media (max-width: 600px) {
@@ -976,6 +980,19 @@ body.light .navbar {
 
     .page-section {
         padding: 110px 5% 70px;
+    }
+
+    .gallery-filter {
+        gap: 8px;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 5px;
+    }
+
+    .gallery-filter-btn {
+        flex: 0 0 auto;
+        padding: 9px 13px;
+        font-size: .7rem;
     }
 
     .hero h1 {
