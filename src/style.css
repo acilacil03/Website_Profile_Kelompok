@@ -620,35 +620,77 @@ body.light .navbar {
 }
 
 .footer {
-    padding: 45px 7% 20px;
+    padding: 65px 7% 20px;
     background: #030303;
     border-top: 1px solid #1b1b1b;
 }
 
-.footer-main,
-.footer-bottom {
+.footer-main {
     max-width: var(--max);
     margin: auto;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    gap: 20px;
+    gap: 60px;
 }
 
-.footer-main p,
-.footer-bottom {
+.footer-brand p {
+    margin-top: 12px;
     color: #666;
     font-size: .78rem;
 }
 
+.footer-links {
+    display: flex;
+    gap: 75px;
+}
+
+.footer-links div {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    min-width: 100px;
+}
+
+.footer-links span {
+    color: var(--accent);
+    font-size: .68rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    color: #777;
+    font-size: .78rem;
+    transition: .25s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    transform: translateX(3px);
+}
+
 .footer-bottom {
+    max-width: var(--max);
+    margin: 45px auto 0;
     padding-top: 25px;
-    margin-top: 25px;
     border-top: 1px solid #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    color: #666;
+    font-size: .78rem;
 }
 
 .footer-bottom a {
     color: #aaa;
+    transition: .25s ease;
+}
+
+.footer-bottom a:hover {
+    color: var(--accent);
 }
 
 .search-trigger {
@@ -1047,11 +1089,27 @@ body.light .navbar {
         padding: 22px;
     }
 
-    .footer-main,
-    .footer-bottom {
-        align-items: flex-start;
-        flex-direction: column;
-    }
+    .footer {
+    padding: 50px 5% 20px;
+}
+
+.footer-main {
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer-links {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 25px;
+}
+
+.footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+}
 
     .search-trigger {
         right: 15px;
