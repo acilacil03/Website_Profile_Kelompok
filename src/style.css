@@ -164,9 +164,29 @@ body.light .navbar {
 }
 
 .hero {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
     background:
-        radial-gradient(circle at 78% 48%, rgba(255, 25, 25, .14), transparent 25%),
+        radial-gradient(circle at 78% 45%, rgba(255, 25, 25, .18), transparent 27%),
+        radial-gradient(circle at 15% 80%, rgba(120, 0, 0, .12), transparent 30%),
         linear-gradient(145deg, #050505 10%, #100000 100%);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    right: -220px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: rgba(255, 0, 0, .08);
+    filter: blur(100px);
+    pointer-events: none;
 }
 
 .hero-container {
@@ -177,6 +197,8 @@ body.light .navbar {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 80px;
+    position: relative;
+    z-index: 1;
 }
 
 .eyebrow,
