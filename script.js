@@ -286,93 +286,115 @@ document.addEventListener("DOMContentLoaded", () => {
     // =========================
 
     function renderSearchResults(query) {
+    const keyword = query.trim().toLowerCase();
 
-        const keyword =
-            query.trim().toLowerCase();
+    if (!keyword) {
+        searchResults.innerHTML =
+            '<p class="search-empty">Ketik sesuatu untuk mencari...</p>';
 
-
-        // kalau input kosong
-        if (!keyword) {
-
-            searchResults.innerHTML =
-                '<p class="search-empty">Ketik sesuatu untuk mencari...</p>';
-
-            return;
-        }
-
-
-        // mencari berdasarkan title, type, dan text
-        const results = searchData.filter(item => {
-
-            const searchableText =
-                `${item.title} ${item.type} ${item.text}`
-                .toLowerCase();
-
-            return searchableText.includes(keyword);
-        });
-
-
-        // tidak ditemukan
-        if (!results.length) {
-
-            searchResults.innerHTML = `
-                <div class="search-empty">
-                    <strong>Tidak ditemukan.</strong>
-
-                    <p>
-                        Coba kata lain seperti
-                        "galeri",
-                        "workshop",
-                        atau
-                        "kolaborasi".
-                    </p>
-                </div>
-            `;
-
-            return;
-        }
-
-
-        // tampilkan hasil
-        searchResults.innerHTML = results
-            .map(item => {
-
-                return `
-                    <a
-                        class="search-result"
-                        href="${item.link}"
-                    >
-
-                        ${
-                            item.image
-                                ? `
-                                    <img
-                                        src="${item.image}"
-                                        alt="${item.title}"
-                                    >
-                                  `
-                                : ""
-                        }
-
-                        <div>
-
-                            <small>
-                                ${item.type}
-                            </small>
-
-                            <h4>
-                                ${item.title}
-                            </h4>
-
-                        </div>
-
-                    </a>
-                `;
-
-            })
-            .join("");
+        return;
     }
 
+    const keywords = keyword
+        .split(/\s+/)
+        .filter(Boolean);
+
+    const results = searchData.filter(item => {
+        const searchableText =
+            `${item.title} ${item.type} ${item.text}`
+                .toLowerCase();
+
+        return keywords.every(word =>
+            searchableText.includes(word)
+        );
+    });
+
+    if (!results.length) {
+        searchResults.innerHTML = `
+            <div class="search-empty">
+                <strong>Tidak ditemukan.</strong>
+                <p>
+                    Coba kata lain seperti
+                    "galeri",
+                    "website",
+                    "workshop",
+                    atau
+                    "kolaborasi".
+                </p>
+            </div>
+        `;
+
+        return;
+    }
+
+    searchResults.innerHTML = results
+        .map(item => {
+            const title = highlightKeyword(
+                item.title,
+                keywords
+            );
+
+            const type = highlightKeyword(
+                item.type,
+                keywords
+            );
+
+            return `
+                <a
+                    class="search-result"
+                    href="${item.link}"
+                >
+                    ${
+                        item.image
+                            ? `
+                                <img
+                                    src="${item.image}"
+                                    alt="${item.title}"
+                                >
+                            `
+                            : ""
+                    }
+
+                    <div>
+                        <small>${type}</small>
+                        <h4>${title}</h4>
+                    </div>
+                </a>
+            `;
+        })
+        .join("");
+
+    document
+        .querySelectorAll(".search-result")
+        .forEach(result => {
+            result.addEventListener("click", () => {
+                closeSearchPanel();
+            });
+        });
+}
+
+
+function highlightKeyword(text, keywords) {
+    let result = text;
+
+    keywords.forEach(word => {
+        const lowerText = result.toLowerCase();
+        const lowerWord = word.toLowerCase();
+
+        if (lowerText.includes(lowerWord)) {
+            const index = lowerText.indexOf(lowerWord);
+
+            result =
+                result.slice(0, index) +
+                "<mark>" +
+                result.slice(index, index + word.length) +
+                "</mark>" +
+                result.slice(index + word.length);
+        }
+    });
+
+    return result;
+}
 
     searchInput?.addEventListener(
         "input",
