@@ -103,6 +103,30 @@ document.addEventListener("DOMContentLoaded", () => {
                 link.classList.add("active-nav");
             }
         });
+
+    const galleryFilterButtons = document.querySelectorAll(".gallery-filter-btn");
+    const galleryItems = document.querySelectorAll(".gallery-item");
+
+    galleryFilterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const filter = button.dataset.filter;
+
+            galleryFilterButtons.forEach(item => {
+                item.classList.remove("active");
+            });
+
+            button.classList.add("active");
+
+            galleryItems.forEach(item => {
+                if (filter === "all" || item.dataset.category === filter) {
+                    item.classList.remove("hidden");
+                } else {
+                    item.classList.add("hidden");
+                }
+            });
+        });
+    });
+
     });
 
 

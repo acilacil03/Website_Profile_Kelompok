@@ -871,6 +871,41 @@ body.light .navbar {
     font-size: .8rem;
 }
 
+.gallery-filter {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+}
+
+.gallery-filter-btn {
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--muted);
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .5px;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.gallery-filter-btn:hover {
+    border-color: var(--accent);
+    color: var(--text);
+}
+
+.gallery-filter-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+.gallery-item.hidden {
+    display: none;
+}
+
 @media (max-width: 900px) {
     .nav-menu {
         position: absolute;
