@@ -1,52 +1,105 @@
-Website Profil Kelompok / Sekolah
+# KodeKita
 
-Proyek website sederhana yang dibuat untuk menampilkan profil sekolah dan kelompok kami. Website ini dirancang agar ringan, mudah diakses, dan informatif.
+KodeKita adalah website profil komunitas programmer dan developer muda yang masih berada di lingkungan sekolah. Website ini dibuat untuk memperkenalkan kelompok, kegiatan, hasil karya, dan proses belajar kami di bidang teknologi.
 
-- Fitur Utama
+Website ini dibuat dengan tampilan yang sederhana dan modern, tetapi tetap menunjukkan bahwa kami adalah pelajar yang sedang belajar dan mengembangkan kemampuan menjadi developer.
 
-Beranda: Halaman utama yang menyambut pengunjung.
+## Fitur Utama
 
-Tentang Kami: Informasi singkat mengenai sekolah, visi misi, dan profil anggota kelompok.
+### Hero Section
 
-Galeri: Dokumentasi pencapaian sekolah.
+Bagian awal website yang digunakan untuk memperkenalkan KodeKita dan memberikan gambaran singkat mengenai komunitas kami.
 
-Kontak: Informasi kontak dan lokasi yang bisa dihubungi.
+### Tentang Kami
 
-Teknologi yang Digunakan
+Berisi informasi mengenai KodeKita, kegiatan yang dilakukan, serta tujuan kami dalam belajar dan mengembangkan kemampuan di bidang teknologi.
 
-Proyek ini dibangun menggunakan teknologi web dasar:
+### Search
 
-HTML5 (Struktur halaman)
+Fitur pencarian yang digunakan untuk membantu pengguna menemukan informasi yang tersedia di dalam website.
 
-CSS3 (Desain dan tata letak)
+### Gallery
 
-JavaScript (Interaktivitas ringan)
+Menampilkan berbagai dokumentasi kegiatan dan hasil dari proses belajar kami.
 
-Cara Menjalankan Project
+Gallery memiliki beberapa kategori:
 
-Anda tidak perlu menginstal aplikasi khusus (seperti Node.js) untuk menjalankan web ini. Cukup ikuti langkah berikut:
+* Semua
+* Web Development
+* Workshop
+* Teamwork
 
-Clone repositori ini ke komputer Anda dengan menjalankan perintah berikut di terminal/CMD:
+Pengguna dapat memilih kategori untuk melihat dokumentasi sesuai dengan jenis kegiatan.
+
+### Detail
+
+Halaman detail digunakan untuk menampilkan informasi yang lebih lengkap mengenai konten yang dipilih dari website.
+
+### Responsive
+
+Website dibuat agar dapat menyesuaikan tampilan dengan berbagai ukuran layar, mulai dari desktop, tablet, hingga mobile.
+
+### Footer
+
+Bagian footer berisi menu navigasi, informasi komunitas, social media, copyright, dan tombol untuk kembali ke bagian atas halaman.
+
+## Teknologi yang Digunakan
+
+Project ini dibuat menggunakan:
+
+* HTML — untuk membuat struktur halaman.
+* CSS — untuk mengatur desain, layout, dan responsive.
+* JavaScript — untuk membuat fitur interaktif seperti search dan filter gallery.
+
+## Struktur Project
+
+index.html
+detail.html
+script.js
+README.md
+src/style.css
+
+## Cara Menjalankan Project
+
+Project ini tidak membutuhkan Node.js atau aplikasi tambahan untuk dijalankan.
+
+### 1. Clone Repository
 
 git clone https://github.com/acilacil03/Website_Profile_Kelompok.git
 
-
-Masuk ke folder proyek:
+### 2. Masuk ke Folder Project
 
 cd Website_Profile_Kelompok
 
+### 3. Menjalankan Website
 
-Buka website:
-Menggunakan Visual Studio Code, Anda bisa klik kanan pada index.html dan pilih "Open with Live Server".
+Buka folder project menggunakan Visual Studio Code.
 
-- Anggota Kelompok
+Kemudian buka index.html
 
-[Nama Anggota 1] - Rakha Maulana Hafizh (PM)
+Website dapat dijalankan menggunakan Live Server dengan klik kanan pada index.html, lalu pilih Open with Live Server.
 
-[Nama Anggota 2] - Raindra Wahid AL-Ghifari (Frontend)
+## Anggota Kelompok
 
-[Nama Anggota 3] - Achmad rifqi alfatih (Backend)
+1. **Rakha Maulana Hafizh** — Project Manager
+2. **Raindra Wahid AL-Ghifari** — Frontend
+3. **Achmad Rifqi Alfatih** — Backend
+4. **Zidan Tridinata** — UI/UX dan Testing
 
-[Nama Anggota 4] - Zidan Tridinata (UI/UX - Testing)
+## Pengembangan Project
 
-Dibuat untuk memenuhi tugas pembuatan website profil.
+Dalam pengerjaannya, setiap fitur dibuat menggunakan branch masing-masing agar proses pengembangan lebih teratur.
+
+Branch yang digunakan:
+
+* feature/hero-section
+* feature/search
+* feature/gallery
+* feature/responsive
+* feature/footer
+
+Setiap fitur yang sudah selesai kemudian digabungkan ke branch `develop`.
+
+## Tujuan Project
+
+Project ini dibuat untuk memperkenalkan KodeKita sebagai kelompok developer muda yang masih belajar di sekolah. Selain sebagai website profil, project ini juga menjadi latihan dalam membuat website, bekerja dalam kelompok, menggunakan Git dan GitHub, serta menerapkan kemampuan yang sudah dipelajari dalam pengembangan web.
