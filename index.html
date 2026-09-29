@@ -3,92 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Sekolah & Komunitas</title>
+    <meta name="description" content="KodeKita - komunitas developer muda untuk belajar, berkolaborasi, dan berkarya.">
+    <title>KodeKita — Membangun Masa Depan Teknologi</title>
     <link rel="stylesheet" href="/src/style.css">
 </head>
 <body>
-    <!-- Navigasi -->
-    <nav class="navbar">
-        <div class="logo">KODEKITA.</div>
-        <ul class="nav-links">
-            <li><a href="#beranda" class="nav-item active-nav">Beranda</a></li>
-            <li><a href="#tentang" class="nav-item">Tentang</a></li>
-            <li><a href="#galeri" class="nav-item">Galeri</a></li>
-            <li><a href="#kontak" class="nav-item">Kontak</a></li>
-        </ul>
-    </nav>
+    <div class="site-bg"></div>
 
-    <!-- Bungkus semua section -->
-    <div class="main-container">
-        <!-- Halaman Beranda (Dua Kolom: Teks & Gambar) -->
-        <section id="beranda" class="hero page-section">
+    <header class="navbar">
+        <a href="#beranda" class="logo nav-item">KODE<span>KITA</span>.</a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav-menu" id="navMenu">
+            <a href="#beranda" class="nav-item active-nav">Beranda</a>
+            <a href="#tentang" class="nav-item">Tentang</a>
+            <a href="#galeri" class="nav-item">Galeri</a>
+            <a href="#kontak" class="nav-item">Kontak</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="icon-btn" id="themeToggle" aria-label="Ubah tema">☾</button>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section id="beranda" class="page-section hero">
             <div class="hero-container">
-                <!-- Sisi Kiri: Teks & Tombol -->
-                <div class="hero-text">
-                    <h1>Membangun Masa Depan Teknologi</h1>
-                    <p>Wadah kolaborasi developer muda untuk berkarya, belajar, dan berinovasi tanpa batas di dunia pemrograman.</p>
-                    <a href="#tentang" class="btn nav-item">Jelajahi Profil</a>
-                    
+                <div class="hero-text reveal">
+                    <div class="eyebrow"><span></span> Komunitas developer muda</div>
+                    <h1>Membangun <em>Masa Depan</em> Teknologi.</h1>
+                    <p>Wadah kolaborasi untuk belajar pemrograman, membuat proyek nyata, dan berkembang bersama tanpa takut mencoba hal baru.</p>
+
+                    <div class="hero-buttons">
+                        <a href="#tentang" class="btn btn-primary nav-item">Jelajahi Profil</a>
+                        <a href="detail.html?type=gallery" class="btn btn-ghost">Lihat Proyek</a>
+                    </div>
+
                     <div class="hero-stats">
                         <div class="stat-box">
-                            <h3>100+</h3>
-                            <p>Anggota Aktif</p>
+                            <strong>100<span>+</span></strong>
+                            <small>Anggota Aktif</small>
                         </div>
                         <div class="stat-box">
-                            <h3>25+</h3>
-                            <p>Proyek IT</p>
+                            <strong>25<span>+</span></strong>
+                            <small>Proyek IT</small>
+                        </div>
+                        <div class="stat-box">
+                            <strong>12<span>+</span></strong>
+                            <small>Kegiatan</small>
                         </div>
                     </div>
                 </div>
 
-                <!-- Sisi Kanan: Area Gambar / Ilustrasi -->
-                <div class="hero-image">
-                    <div class="image-box">
-                        <span>ILUSTRASI / LOGO</span>
+                <div class="hero-visual reveal">
+                    <div class="code-window">
+                        <div class="window-top">
+                            <div class="window-dots"><i></i><i></i><i></i></div>
+                            <span>kodekita.js</span>
+                        </div>
+                        <div class="code-content">
+                            <p><b>01</b> <span class="purple">const</span> komunitas = {</p>
+                            <p><b>02</b>&nbsp;&nbsp;nama: <span class="green">'KodeKita'</span>,</p>
+                            <p><b>03</b>&nbsp;&nbsp;fokus: <span class="green">'Technology'</span>,</p>
+                            <p><b>04</b>&nbsp;&nbsp;semangat: <span class="orange">Infinity</span>,</p>
+                            <p><b>05</b>&nbsp;&nbsp;kolaborasi: <span class="blue">true</span></p>
+                            <p><b>06</b> };</p>
+                            <p><b>07</b> <span class="purple">console</span>.log(komunitas);</p>
+                        </div>
+                        <div class="code-status"><span></span> ready to build</div>
                     </div>
+                    <div class="floating-card card-one">⌘ <span>Build Together</span></div>
+                    <div class="floating-card card-two">✦ <span>Learn & Grow</span></div>
                 </div>
             </div>
         </section>
 
-        <!-- Halaman Tentang -->
-        <section id="tentang" class="content-section page-section">
-            <h2>Tentang Kami</h2>
-            <p>Kami adalah komunitas IT yang fokus pada pengembangan skill pemrograman, kolaborasi proyek nyata, dan persiapan karier di dunia perangkat lunak profesional.</p>
+        <section id="tentang" class="page-section section-dark">
+            <div class="section-heading reveal">
+                <div>
+                    <span class="section-kicker">01 — ABOUT US</span>
+                    <h2>Bukan cuma belajar.<br><span>Kita bikin sesuatu.</span></h2>
+                </div>
+                <p>KodeKita hadir sebagai ruang untuk bertukar ilmu, membangun proyek, dan belajar dari proses bersama.</p>
+            </div>
+
+            <div class="about-grid">
+                <article class="info-card reveal" data-search="tentang kami komunitas developer pemrograman kolaborasi">
+                    <div class="card-icon">⌘</div>
+                    <h3>Belajar Bersama</h3>
+                    <p>Mulai dari HTML, CSS, JavaScript sampai teknologi modern, semuanya dipelajari lewat praktik.</p>
+                    <a href="detail.html?type=about" class="text-link">Baca selengkapnya <span>→</span></a>
+                </article>
+
+                <article class="info-card reveal" data-search="proyek nyata portfolio aplikasi website">
+                    <div class="card-icon">◈</div>
+                    <h3>Proyek Nyata</h3>
+                    <p>Ide tidak berhenti di catatan. Kita mengubahnya menjadi website, aplikasi, dan karya yang bisa dipamerkan.</p>
+                    <a href="detail.html?type=projects" class="text-link">Lihat proyek <span>→</span></a>
+                </article>
+
+                <article class="info-card reveal" data-search="komunitas kolaborasi teamwork teman developer">
+                    <div class="card-icon">✦</div>
+                    <h3>Kolaborasi</h3>
+                    <p>Bekerja dalam tim mengajarkan Git, pembagian tugas, komunikasi, dan cara menyelesaikan masalah.</p>
+                    <a href="detail.html?type=collaboration" class="text-link">Pelajari cara kerja <span>→</span></a>
+                </article>
+            </div>
         </section>
 
-        <!-- Halaman Galeri -->
-        <section id="galeri" class="content-section bg-light page-section">
-            <h2>Galeri Kegiatan</h2>
+        <section id="galeri" class="page-section section-gradient">
+            <div class="section-heading reveal">
+                <div>
+                    <span class="section-kicker">02 — GALLERY</span>
+                    <h2>Beberapa hal yang<br><span>sudah kita kerjakan.</span></h2>
+                </div>
+                <a href="detail.html?type=gallery" class="btn btn-small">Buka Semua Galeri</a>
+            </div>
+
             <div class="gallery-grid">
-                <div class="gallery-item">PROYEK 01</div>
-                <div class="gallery-item">PROYEK 02</div>
-                <div class="gallery-item">PROYEK 03</div>
+                <article class="gallery-item reveal" data-search="galeri website profile kodekita web design">
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=900&q=80" alt="Coding di layar komputer">
+                    <div class="gallery-overlay">
+                        <span>WEB DEVELOPMENT</span>
+                        <h3>Website Profile</h3>
+                        <a href="detail.html?type=gallery&id=1">Detail →</a>
+                    </div>
+                </article>
+
+                <article class="gallery-item reveal" data-search="galeri workshop javascript coding">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Workshop pemrograman">
+                    <div class="gallery-overlay">
+                        <span>WORKSHOP</span>
+                        <h3>JavaScript Workshop</h3>
+                        <a href="detail.html?type=gallery&id=2">Detail →</a>
+                    </div>
+                </article>
+
+                <article class="gallery-item reveal" data-search="galeri teamwork diskusi proyek">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80" alt="Tim sedang berdiskusi">
+                    <div class="gallery-overlay">
+                        <span>TEAMWORK</span>
+                        <h3>Project Collaboration</h3>
+                        <a href="detail.html?type=gallery&id=3">Detail →</a>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <!-- Halaman Kontak -->
-        <section id="kontak" class="content-section page-section">
-            <h2>Hubungi Kami</h2>
-            <form action="proses_kontak.php" method="POST" class="contact-form">
-                <div class="form-group">
-                    <label for="nama">Nama Lengkap:</label>
-                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama..." required>
+        <section id="kontak" class="page-section section-dark">
+            <div class="contact-layout reveal">
+                <div>
+                    <span class="section-kicker">03 — CONTACT</span>
+                    <h2>Punya ide?<br><span>Ngobrol bareng.</span></h2>
+                    <p>Kalau kamu ingin ikut berkolaborasi atau sekadar bertanya tentang kegiatan KodeKita, kirim pesan lewat form.</p>
+                    <a href="detail.html?type=contact" class="text-link">Lihat informasi kontak <span>→</span></a>
                 </div>
-                <div class="form-group">
-                    <label for="pesan">Pesan:</label>
-                    <textarea id="pesan" name="pesan" rows="4" placeholder="Tulis pesanmu di sini..." required></textarea>
-                </div>
-                <button type="submit" class="btn btn-submit">Kirim Pesan</button>
-            </form>
-        </section>
-    </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Tim 5 - KodeKita Studio. Hak Cipta Dilindungi.</p>
+                <form action="https://formspree.io/f/mvgljlrz" method="POST" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nama">Nama</label>
+                            <input type="text" id="nama" name="nama" placeholder="Nama kamu..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="email@contoh.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pesan">Pesan</label>
+                        <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesanmu..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-btn">Kirim Pesan ↗</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-main">
+            <a href="#beranda" class="logo nav-item">KODE<span>KITA</span>.</a>
+            <p>Build. Learn. Collaborate.</p>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Tim 5 — KodeKita Studio.</span>
+            <a href="#beranda" class="nav-item">Kembali ke atas ↑</a>
+        </div>
     </footer>
 
-    <!-- File JavaScript Terpisah -->
+    <div class="search-panel" id="searchPanel">
+        <div class="search-panel-inner">
+            <div class="search-top">
+                <span>🔎 Cari di KodeKita</span>
+                <button id="closeSearch" class="close-search">×</button>
+            </div>
+            <input type="search" id="searchInput" placeholder="Contoh: galeri, workshop, kolaborasi..." autocomplete="off">
+            <div id="searchResults" class="search-results">
+                <p class="search-empty">Ketik sesuatu untuk mencari...</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="search-trigger" id="searchTrigger" aria-label="Cari">⌕ <span>Cari</span></button>
+    <div class="toast" id="toast"></div>
+
     <script src="script.js"></script>
 </body>
 </html>
